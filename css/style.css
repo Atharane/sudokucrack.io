@@ -1,13 +1,11 @@
-.box{
+.square{
     width: 40px;
     height: 40px;
-    outline: 1px solid #000;
+    border: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 
 #wrapper{
@@ -15,4 +13,5 @@
     height: 360px;
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid rgb(148, 32, 32);
 }
