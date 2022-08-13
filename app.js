@@ -78,9 +78,21 @@ function sudokuSolver() {
   }
 }
 
-document.getElementById("solve-button").addEventListener("click", function (e) {
+document.getElementById("solve-btn").addEventListener("click", function (e) {
   sudokuSolver();
   renderCells(sudokuArr);
 });
 
+document.getElementById("new-btn").addEventListener("click", function (e) {
+  r = fetch("https://sugoku.herokuapp.com/board?difficulty=hard")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      sudokuArr = data.board;
+      renderCells(sudokuArr);
+    });
+});
+
 renderCells(sudokuArr);
+
