@@ -1,17 +1,63 @@
-.square{
-    width: 40px;
-    height: 40px;
-    border: 1px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", sans-serif;
 }
 
-#wrapper{
-    width: 360px;
-    height: 360px;
-    display: flex;
-    flex-wrap: wrap;
-    border: 2px solid rgb(148, 32, 32);
+#puzzle {
+  width: 360px;
+  height: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  box-shadow: 0.1em 0.1em;
+}
+
+#puzzle :nth-child(even) {
+  background: #ced1d0;
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* background: #8FC0A9; */
+}
+
+#button-wrapper {
+  margin: 20px 0;
+  width: 360px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#button-wrapper > button {
+  /* background: #FBCA1F; */
+  font-family: inherit;
+  padding: 0.3em 1em;
+  font-weight: 700;
+  font-size: 16px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+}
+
+#button-wrapper > button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+#button-wrapper > button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
