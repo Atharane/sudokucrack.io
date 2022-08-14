@@ -42,7 +42,6 @@ body {
 }
 
 #button-wrapper > button {
-  /* background: #FBCA1F; */
   font-family: inherit;
   padding: 0.3em 1em;
   font-weight: 700;
@@ -58,6 +57,7 @@ body {
 }
 
 #button-wrapper > button:active {
+  background: #fbca1f;
   transform: translate(0.05em, 0.05em);
   box-shadow: 0.05em 0.05em;
 }

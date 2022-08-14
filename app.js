@@ -55,16 +55,14 @@ function isValid(row, col, value) {
 function sudokuSolver() {
   for (let row = 0; row < 9; row++) {
     for (let col = 0; col < 9; col++) {
-      if (row == 8 && col == 8) return true;
       if (sudokuArr[row][col]) continue;
 
       for (let value = 1; value <= 9; value++) {
-        if (isValid(row, col, value)) {
-          // console.log("placing " + value + " at " + row + " " + col);
-          if (row == 0 && col == 5) {
-            console.log("placing " + value + " at " + row + " " + col);
-          }
+        if (isValid(row, col, value)) {     
           sudokuArr[row][col] = value;
+
+          // base case
+          if (row == 8 && col == 8) return true;
 
           if (sudokuSolver(sudokuArr)) {
             return true;
@@ -72,7 +70,6 @@ function sudokuSolver() {
           sudokuArr[row][col] = 0;
         }
       }
-      console.log("arr [" + row + "][" + col + "] = " + sudokuArr[row][col]);
       return false;
     }
   }
