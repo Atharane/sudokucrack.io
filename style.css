@@ -10,8 +10,8 @@ body {
 }
 
 #puzzle {
-  width: 360px;
-  height: 360px;
+  width: 324px;
+  /* height: 324px; */
   display: flex;
   flex-wrap: wrap;
   border: 1px solid black;
@@ -23,20 +23,19 @@ body {
 }
 
 .square {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border: 1px solid #000;
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  /* background: #8FC0A9; */
 }
 
 #button-wrapper {
   margin: 20px 0;
-  width: 360px;
+  width: 324px;
   display: flex;
   justify-content: space-around;
 }
